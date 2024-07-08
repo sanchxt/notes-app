@@ -3,6 +3,7 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link } from "react-router-dom";
 
 import { validateEmail } from "../../utils/helpers";
+import CardScroller from "../../components/Login/CardScroller";
 
 const Login = () => {
   const [showPassword, setShowPassword] = useState<boolean>(false);
@@ -37,7 +38,7 @@ const Login = () => {
   };
 
   return (
-    <div className="w-full h-full bg-gradient-to-b from-slate-100 via-slate-400 to-slate-500">
+    <div className="w-full h-full bg-gradient-to-b from-slate-100 via-slate-300 to-slate-500 flex">
       <section className="w-screen md:w-1/2 h-screen overflow-hidden">
         <h1 className="w-full italic text-2xl md:text-3xl lg:text-4xl pl-2 md:pt-1">
           Notes
@@ -47,7 +48,7 @@ const Login = () => {
           <h2 className="text-2xl lg:text-3xl font-semibold mb-4 lg:mb-6">
             Welcome back!
           </h2>
-          <div className="w-[95%] md:w-[90%] lg:w-[80%] h-2/3 bg-white/90 shadow-xl rounded-lg">
+          <div className="w-[95%] md:w-[90%] lg:w-[80%] h-1/2 lg:h-2/3 bg-white/90 shadow-xl rounded-lg">
             <p className="text-center italic mb-8 lg:mb-16 text-sm lg:text-lg mt-2 text-gray-800/70">
               &apos;Being organised is the key to success&apos;
             </p>
@@ -103,7 +104,7 @@ const Login = () => {
                 </div>
               </div>
 
-              <p className="text-[0.8rem] lg:text-[0.9rem] mt-4 md:mt-5 text-center">
+              <p className="text-[0.8rem] lg:text-[0.9rem] mt-6 lg::mt-8 text-center">
                 Don&apos;t have an account yet?{" "}
                 <Link to="/signup" className="text-blue-500">
                   Create one!
@@ -120,6 +121,8 @@ const Login = () => {
           </div>
         </div>
       </section>
+
+      <CardScroller />
     </div>
   );
 };
